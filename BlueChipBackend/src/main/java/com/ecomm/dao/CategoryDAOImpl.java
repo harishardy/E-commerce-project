@@ -31,6 +31,7 @@ public class CategoryDAOImpl implements CategoryDAO
 		}
 		catch(Exception e)
 		{
+			System.out.println("Exception Arised: "+e);
 			return false;
 		}
 	}

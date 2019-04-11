@@ -13,6 +13,8 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.ecomm.model.Category;
+
 @Configuration
 @ComponentScan("com.ecomm")
 @EnableTransactionManagement
@@ -51,6 +53,8 @@ public class DBConfig
 		
 		LocalSessionFactoryBuilder factory=new LocalSessionFactoryBuilder(getH2DataSource());
 		factory.addProperties(hibernateProperties);
+		
+		factory.addAnnotatedClass(Category.class);
 		
 		System.out.println("---Session Factory Object Created---");
 		return factory.buildSessionFactory();
