@@ -24,34 +24,36 @@ public class UserDAOTest
 		userDAO=(UserDAO)context.getBean("userDAO");
 	}
 	
-	
+	@Ignore
 	@Test
-	public void registerUserTest()
+	public  void registerUserTest()
 	{
 		UserDetail user=new UserDetail();
 		
-		user.setUsername("tarun");
+		user.setUsername("ragav");
 		user.setPassword("pass123");
-		user.setEmailId("tarun@gmail.com");
-		user.setMobileNo("8274784223");
-		user.setRole("ROLE_USER");
-		user.setAddress("Hyderabad");
+		user.setEmailId("ragav@gmail.com");
+		user.setMobileNo("9374869223");
+		user.setRole("ROLE_ADMIN");
+		user.setAddress("Chennai");
 		
 		assertTrue("Problem in Registering the User: ",userDAO.registerUser(user));
 	}
 	
-	@Ignore
+	
+	
 	@Test
 	public void updateUserTest()
 	{
 		UserDetail user=userDAO.getUserDetail("tarun");
 		
-		user.setAddress("chennai");
+		user.setAddress("kerala");
 		user.setMobileNo("6436545467");
 		
 		assertTrue("Problem in Updating User: ",userDAO.updateUser(user));
 		
 	}
+	
 	
 
 }

@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ecomm.model.UserDetail;
 
-@Repository("UserDAO")
+@Repository("userDAO")
 @Transactional
 public class UserDAOImpl implements UserDAO
 {
