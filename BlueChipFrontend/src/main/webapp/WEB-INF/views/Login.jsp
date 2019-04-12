@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html"%>
-<%@include file="Header.jsp" %>
+<%@include file="/WEB-INF/views/Header.jsp" %>
 	
-	<h3 align="center">Login Page</h3>
+<html>
+<body>
+
+
+<h3 align="center">Login Page</h3>
 
 </body>
 </html>

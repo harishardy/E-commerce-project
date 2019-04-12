@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html"%>
 <%@include file="Header.jsp"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <form action="<c:url value="/addCategory"/>"method="post">
 <table align="center">
 	<tr>
@@ -37,7 +39,7 @@
 	<td>Operation</td>
 </tr>
 
-<c:forEach items="$(listCategories)"var-"category">
+<c:forEach items="$(listCategories)"var="category">
 <tr>
 	<td>$(category.categoryId)</td>
 	<td>$(category.categoryName)</td>
