@@ -22,6 +22,10 @@
 	</listener-class>
 </listener>
 
+<welcome-list>
+<welcome-file>/</welcome-file>
+</welcome-list>
+
 </web-app>
 
 
