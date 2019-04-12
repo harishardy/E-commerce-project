@@ -9,22 +9,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ecomm.model.Product;
+import com.ecomm.model.Supplier;
 
-@Repository("productDAO")
+@Repository("supplierDAO")
 @Transactional
-public class ProductDAOImpl implements ProductDAO 
+public class SupplierDAOImpl implements SupplierDAO 
 {
 
 	@Autowired
 	SessionFactory sessionFactory;
 	
 	@Override
-	public boolean addProduct(Product product) 
+	public boolean addSupplier(Supplier supplier) 
 	{
 		try
 		{
-			sessionFactory.getCurrentSession().save(product);
+			sessionFactory.getCurrentSession().save(supplier);
 			return true;
 		}
 		catch(Exception e)
@@ -34,10 +34,10 @@ public class ProductDAOImpl implements ProductDAO
 	}
 
 	@Override
-	public boolean deleteProduct(Product product) {
+	public boolean deleteSupplier(Supplier supplier) {
 		try
 		{
-			sessionFactory.getCurrentSession().delete(product);
+			sessionFactory.getCurrentSession().delete(supplier);
 			return true;
 		}
 		catch(Exception e)
@@ -47,10 +47,10 @@ public class ProductDAOImpl implements ProductDAO
 	}
 
 	@Override
-	public boolean updateProduct(Product product) {
+	public boolean updateSupplier(Supplier supplier) {
 		try
 		{
-			sessionFactory.getCurrentSession().update(product);
+			sessionFactory.getCurrentSession().update(supplier);
 			return true;
 		}
 		catch(Exception e)
@@ -60,33 +60,34 @@ public class ProductDAOImpl implements ProductDAO
 	}
 
 	@Override
-	public Product getProduct(int productId) 
+	public Supplier getSupplier(int supplierId) 
 	{
 		Session session=sessionFactory.openSession();
-		Product product=session.get(Product.class, productId);
+		Supplier supplier=session.get(Supplier.class, supplierId);
 		session.close();
-		return product;
+		return supplier;
 	}
 
 	@Override
-	public List<Product> listProducts() 
+	public List<Supplier> listSupplier() 
 	{
 		Session session=sessionFactory.openSession();
-		Query query=session.createQuery("from Product");
-		List<Product> listProducts=query.list();
+		Query query=session.createQuery("from Supplier");
+		List<Supplier> listSupplier=query.list();
 		session.close();
-		return listProducts;
+		return listSupplier;
 	}
 
 	@Override
-	public List<Product> listProductCategoryWise(int categoryId) 
+	public List<Supplier> listSupplierCategoryWise(int categoryId) 
 	{
 		Session session=sessionFactory.openSession();
-		Query query=session.createQuery("from Product where categoryId=:catid");
+		Query query=session.createQuery("from Supplier where categoryId=:catid");
 		query.setParameter("catid", categoryId);
-		List<Product> listProducts=query.list();
+		List<Supplier> listSupplier=query.list();
 		session.close();
-		return listProducts;
+		return listSupplier;
 	}
 
+	
 }
