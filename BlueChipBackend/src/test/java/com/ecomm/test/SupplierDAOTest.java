@@ -27,7 +27,7 @@ static SupplierDAO supplierDAO;
 		supplierDAO=(SupplierDAO)context.getBean("supplierDAO");
 	}
 	
-	
+	@Ignore
 	@Test
 	public void addSupplierTest()
 	{
@@ -40,7 +40,7 @@ static SupplierDAO supplierDAO;
 		assertTrue("Problem in Adding Category: ",supplierDAO.addSupplier(supplier));
 	}
 	
-	@Ignore
+	
 	@Test
 	public void listSupplierTest()
 	{
