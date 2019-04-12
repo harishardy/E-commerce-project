@@ -1,9 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html"%>
+<%@include file="Header.jsp"%>
 
 <form action="<c:url value="/addCategory"/>"method="post">
 <table align="center">
-
 	<tr>
 		<td colspan="2"><center>Category Detail</center></td>
 	</tr>
@@ -24,4 +23,30 @@
 	</tr>
 </table>
 </form>
+
+<table align="center">
+
+<tr>
+	<td colspan="4"><center>Category Detail</center></td>
+</tr>
+
+<tr>
+	<td>ID</td>
+	<td>Name</td>
+	<td>Description</td>
+	<td>Operation</td>
+</tr>
+
+<c:forEach items="$(listCategories)"var-"category">
+<tr>
+	<td>$(category.categoryId)</td>
+	<td>$(category.categoryName)</td>
+	<td>$(category.categoryDesc)</td>
+	<td>
+		<a href="<c:url value="/editCategory/$(category.categoryId)"/>">EDIT</a>/
+		<a href="<c:url value="/deleteCategory/$(category.categoryId)"/>">DELETE</a>
+	</td>
+</tr>
+</c:forEach>
+</table>
 
