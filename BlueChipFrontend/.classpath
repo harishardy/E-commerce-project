@@ -29,6 +29,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/harishhardy/Documents/h2-1.4.197.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/harishhardy/Documents/h2-1.4.197.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
