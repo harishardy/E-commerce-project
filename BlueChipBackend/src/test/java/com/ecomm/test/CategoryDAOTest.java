@@ -27,18 +27,18 @@ public class CategoryDAOTest
 		categoryDAO=(CategoryDAO)context.getBean("categoryDAO");
 	}
 	
-	@Ignore
+	//@Ignore
 	@Test
 	public void addCategoryTest()
 	{
 		Category category=new Category();
 		category.setCategoryName("Cabinet");
-		category.setCategoryDesc("ATX Cabinet");
+		category.setCategoryDesc("ACT Cabinet");
 		
 		assertTrue("Promblem in Category Insertion",categoryDAO.addCategory(category));
 	}
 	
-	@Ignore
+	//@Ignore
 	@Test
 	public void deleteCategoryTest()
 	{
@@ -47,6 +47,7 @@ public class CategoryDAOTest
 		assertTrue("Problem in Category Deletion: ",categoryDAO.deleteCategory(category));
 	}
 	
+	//@Ignore
 	@Test
 	public void updateCategoryTest()
 	{
@@ -56,6 +57,7 @@ public class CategoryDAOTest
 		assertTrue("Problem in Category Updation: ",categoryDAO.updateCategory(category));
 		
 	}
+	
 	
 	@Test
 	public void listCategoriesTest()
