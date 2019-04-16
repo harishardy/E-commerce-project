@@ -42,8 +42,8 @@ public class CategoryController
 		return "Category";
 	}
 	
-	@RequestMapping(value="/deleteCategory/(categoryID)")
-	public String deleteCategory(@PathVariable("categoryID")int categoryId,Model m)
+	@RequestMapping(value="/deleteCategory/(categoryId)")
+	public String deleteCategory(@PathVariable("categoryId")int categoryId,Model m)
 	{
 		Category category=categoryDAO.getCategory(categoryId);
 		categoryDAO.deleteCategory(category);
@@ -55,8 +55,8 @@ public class CategoryController
 		return "Category";
 	}
 	
-	@RequestMapping(value="/editCategory/(categoryID)")
-	public String editCategory(@PathVariable("categoryID")int categoryId,Model m)
+	@RequestMapping(value="/editCategory/(categoryId)")
+	public String editCategory(@PathVariable("categoryId")int categoryId,Model m)
 	{
 		Category category=categoryDAO.getCategory(categoryId);
 		
