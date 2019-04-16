@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html"%>
-<%@include file="Header.jsp"%>
+<%@include file="/WEB-INF/views/Header.jsp"%>
 
 
 <form action="<c:url value="/updateCategory"/>"method="post">
@@ -28,11 +28,6 @@
 	</tr>
 </table>
 </form>
-
-
-
-
-
 
 
 </body>

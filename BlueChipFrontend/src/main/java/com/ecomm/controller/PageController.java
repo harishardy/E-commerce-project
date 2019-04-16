@@ -19,4 +19,5 @@ public class PageController
 		m.addAttribute("title", "Register Page");
 		return "Register";
 	}
+	
 }

@@ -60,7 +60,7 @@ public class CategoryController
 	{
 		Category category=categoryDAO.getCategory(categoryId);
 		
-		List<Category>categoryList=categoryDAO.listCategory();
+		
 		m.addAttribute("category",category);
 		m.addAttribute("title", "Category");
 		

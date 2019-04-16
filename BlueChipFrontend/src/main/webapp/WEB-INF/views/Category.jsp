@@ -45,7 +45,7 @@
 	<td>$(category.categoryName)</td>
 	<td>$(category.categoryDesc)</td>
 	<td>
-		<a href="<c:url value="/editCategory/$(category.categoryId)"/>">EDIT</a>/
+		<a href="<c:url value="/editCategory/$(category.categoryId)"/>">EDIT</a>
 		<a href="<c:url value="/deleteCategory/$(category.categoryId)"/>">DELETE</a>
 	</td>
 </tr>
