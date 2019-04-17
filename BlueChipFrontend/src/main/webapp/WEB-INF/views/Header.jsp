@@ -9,6 +9,7 @@
 <table style="width:100%">
 <tr>
 <th align="left">
+<a href="<c:url value='/'/>"><input type="submit" value="Home"/></a>
 <a href="<c:url value='/category'/>"><input type="submit" value="Category"/></a>
 </th>
 <th align="right">
