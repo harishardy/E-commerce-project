@@ -8,7 +8,7 @@
 	</tr>
 	<tr>
 		<td>Category Id</td>
-		<td><input type="text" name="catid" value="${category.categoryId}" readonly/></td>
+		<td><input type="text" name="catId" value="${category.categoryId}"/></td>
 	</tr>
 	<tr>
 		<td>Category Name</td>
@@ -16,12 +16,12 @@
 	</tr>
 	<tr>
 		<td>Category Description</td>
-		<td><textarea cols=30 rows="6" name="CatDesc">${category.categoryDesc}</textarea></td>
+		<td><textarea cols=30 rows="6" name="catDesc">${category.categoryDesc}</textarea></td>
 	</tr>
 	<tr>
 		<td colspan="2">
 		<center>
-		<input type="submit" value="Add Category"/>
+		<input type="submit" value="Update Category"/>
 		</center>
 		</td>
 	</tr>

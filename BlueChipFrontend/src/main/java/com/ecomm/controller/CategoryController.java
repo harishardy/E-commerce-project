@@ -68,7 +68,7 @@ public class CategoryController
 	}
 	
 	@RequestMapping(value="/updateCategory",method=RequestMethod.POST)
-	public String updateCategory(@RequestParam("catId") int categoryId,@RequestParam("catName")String catName,@RequestParam("catDesc")String catDesc,Model m)
+	public String updateCategory(@RequestParam("catId")int categoryId,@RequestParam("catName")String catName,@RequestParam("catDesc")String catDesc,Model m)
 	{
 		Category category=categoryDAO.getCategory(categoryId);
 		category.setCategoryName(catName);
