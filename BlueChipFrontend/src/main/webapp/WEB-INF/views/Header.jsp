@@ -6,9 +6,21 @@
 </head>
 <body>
 
-<a href="<c:url value='/login'/>">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="<c:url value='/register'/>">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="<c:url value='/category'/>">Category</a>
+<table style="width:100%">
+<tr>
+<th align="left">
+<a href="<c:url value='/category'/>"><input type="submit" value="Category"/></a>
+</th>
+<th align="right">
+<a href="<c:url value='/login'/>"><input type="submit" value="Login"/></a>
+<a href="<c:url value='/register'/>"><input type="submit" value="Register"/></a>
+
+</th>
+</tr>
+</table>
+
+
+
 
 </body>
 </html>
