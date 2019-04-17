@@ -8,7 +8,7 @@
 	</tr>
 	<tr>
 		<td>Category Id</td>
-		<td><input type="text" name="catId" value="${category.categoryId}"/></td>
+		<td><input type="text" name="catId" value="${category.categoryId}" readonly/></td>
 	</tr>
 	<tr>
 		<td>Category Name</td>
