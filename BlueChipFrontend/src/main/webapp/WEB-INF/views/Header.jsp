@@ -11,6 +11,8 @@
 <th align="left">
 <a href="<c:url value='/'/>"><input type="submit" value="Home"/></a>
 <a href="<c:url value='/category'/>"><input type="submit" value="Category"/></a>
+<a href="<c:url value='/product'/>"><input type="submit" value="Product"/></a>
+<a href="<c:url value='/supplier'/>"><input type="submit" value="Supplier"/></a>
 </th>
 <th align="right">
 <a href="<c:url value='/login'/>"><input type="submit" value="Login"/></a>

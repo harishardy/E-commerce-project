@@ -21,6 +21,8 @@ public class Product
 	int supplierId;
 	
 	
+	
+	
 	public int getProductId() {
 		return productId;
 	}

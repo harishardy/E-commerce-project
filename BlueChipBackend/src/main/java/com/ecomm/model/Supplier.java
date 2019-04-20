@@ -12,8 +12,12 @@ public class Supplier
 	@Id
 	@GeneratedValue
 	int supplierId;
+	
+	
 	String supplierName;
 	String supplierAddr;
+	
+	
 	
 	public int getSupplierId() {
 		return supplierId;

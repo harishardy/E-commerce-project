@@ -4,11 +4,12 @@
 <form action="<c:url value="/updateCategory"/>" method="post">
 <table align="center">
 	<tr>
-		<td colspan="2"><center>Category Detail</center></td>
+		<h3><center>Category Detail</center></h3>
 	</tr>
+	
 	<tr>
 		<td>Category Id</td>
-		<td><input type="text" name="catId" value="${category.categoryId}" readonly/></td>
+		<td><input type="number" name="catId" value="${category.categoryId}"readonly/></td>
 	</tr>
 	<tr>
 		<td>Category Name</td>

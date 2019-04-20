@@ -8,9 +8,10 @@
 <form action="<c:url value="/addCategory"/>" method="post">
 <table align="center">
 	<tr>
-		<td colspan="2"><center><h3>Add Category Detail</h3></center></td>
+		<h3><center> Add Category Detail</center></h3>
 	</tr>
 	<tr>
+		
 		<td><h4>Category Name</h4></td>
 		<td><h4>Category Description</h4></td>
 		<td><h4>Operation</h4></td>
@@ -30,25 +31,35 @@
 <table align="center">
 
 <tr>
-	<td colspan="6"><center><h3>Category Detail</h3></center></td>
+	<center><h3>Category Detail</h3></center>
 </tr>
 
 <tr>
+
 	<td><h4>ID</h4></td>
 	<td></td>
 	<td></td>
 	<td><h4>Name</h4></td>
+	<td></td>
+	<td></td>
 	<td><h4>Description</h4></td>
+	<td></td>
+	<td></td>
 	<td><h4>Operation</h4></td>
 </tr>
 
 <c:forEach items="${listCategories}" var="category">
 <tr>
+	
 	<td>${category.categoryId}</td>
 	<td></td>
 	<td></td>
 	<td>${category.categoryName}</td>
+	<td></td>
+	<td></td>
 	<td>${category.categoryDesc}</td>
+	<td></td>
+	<td></td>
 	<td>
 		<a href="<c:url value="/editCategory/${category.categoryId}"/>"><input type="submit" value="Edit"/></a> / 
 		<a href="<c:url value="/deleteCategory/${category.categoryId}"/>"><input type="submit" value="Delete"/></a>
