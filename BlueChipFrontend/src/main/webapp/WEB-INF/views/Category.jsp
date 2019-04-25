@@ -3,12 +3,12 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-
+<div class="container">
 
 <form action="<c:url value="/addCategory"/>" method="post">
-<table align="center">
-	<tr>
-		<h3><center> Add Category Detail</center></h3>
+<table align="center" class="table table-bordered">
+	<tr bgcolor="grey">
+		<td colspan="3"><h3><center> Add Category Detail</center></h3></td>
 	</tr>
 	<tr>
 		
@@ -28,23 +28,20 @@
 
 
 
-<table align="center">
+<table align="center" class="table table-bordered">
 
 <tr>
-	<center><h3>Category Detail</h3></center>
+	<td colspan="4"><h3><center>Category Detail</center></h3></td>
 </tr>
 
 <tr>
 
 	<td><h4>ID</h4></td>
-	<td></td>
-	<td></td>
+	
 	<td><h4>Name</h4></td>
-	<td></td>
-	<td></td>
+	
 	<td><h4>Description</h4></td>
-	<td></td>
-	<td></td>
+	
 	<td><h4>Operation</h4></td>
 </tr>
 
@@ -52,19 +49,16 @@
 <tr>
 	
 	<td>${category.categoryId}</td>
-	<td></td>
-	<td></td>
+	
 	<td>${category.categoryName}</td>
-	<td></td>
-	<td></td>
+	
 	<td>${category.categoryDesc}</td>
-	<td></td>
-	<td></td>
+	
 	<td>
-		<a href="<c:url value="/editCategory/${category.categoryId}"/>"><input type="submit" value="Edit"/></a> / 
-		<a href="<c:url value="/deleteCategory/${category.categoryId}"/>"><input type="submit" value="Delete"/></a>
+		<a href="<c:url value="/editCategory/${category.categoryId}"/>">Edit</a> / 
+		<a href="<c:url value="/deleteCategory/${category.categoryId}"/>">Delete</a>
 	</td>
 </tr>
 </c:forEach>
 </table>
-
+</div>

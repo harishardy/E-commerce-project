@@ -46,7 +46,7 @@ static ProductDAO productDAO;
 	@Test
 	public void listProductTest()
 	{
-		List<Product> listProducts=productDAO.listProducts();
+		List<Product> listProducts=productDAO.listProduct();
 		
 		assertTrue("Problem in Listing the Products",listProducts.size()>0);
 		

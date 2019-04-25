@@ -69,13 +69,13 @@ public class ProductDAOImpl implements ProductDAO
 	}
 
 	@Override
-	public List<Product> listProducts() 
+	public List<Product> listProduct() 
 	{
 		Session session=sessionFactory.openSession();
 		Query query=session.createQuery("from Product");
-		List<Product> listProducts=query.list();
+		List<Product> listProduct=query.list();
 		session.close();
-		return listProducts;
+		return listProduct;
 	}
 
 	@Override
@@ -84,9 +84,9 @@ public class ProductDAOImpl implements ProductDAO
 		Session session=sessionFactory.openSession();
 		Query query=session.createQuery("from Product where categoryId=:catid");
 		query.setParameter("catid", categoryId);
-		List<Product> listProducts=query.list();
+		List<Product> listProduct=query.list();
 		session.close();
-		return listProducts;
+		return listProduct;
 	}
 
 }

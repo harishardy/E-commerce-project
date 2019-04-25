@@ -2,26 +2,50 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<title>BlueChip=${title}</title>
+<title>GadgetsGo=${title}</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<table style="width:100%">
-<tr>
-<th align="left">
-<a href="<c:url value='/'/>"><input type="submit" value="Home"/></a>
-<a href="<c:url value='/category'/>"><input type="submit" value="Category"/></a>
-<a href="<c:url value='/product'/>"><input type="submit" value="Product"/></a>
-<a href="<c:url value='/supplier'/>"><input type="submit" value="Supplier"/></a>
-</th>
-<th align="right">
-<a href="<c:url value='/login'/>"><input type="submit" value="Login"/></a>
-<a href="<c:url value='/register'/>"><input type="submit" value="Register"/></a>
 
-</th>
-</tr>
-</table>
 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.jsp">GadgetsGo</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/BlueChipFrontend">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="<c:url value='/categoryList'/>">Category List<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="<c:url value='/category'/>">Smart Phones</a></li>
+          <li><a href="<c:url value='/product'/>">Laptops</a></li>
+          <li><a href="<c:url value='/supplier'/>">Desktops</a></li>
+          <li><a href="<c:url value='/supplier'/>">Tablets</a></li>
+          <li><a href="<c:url value='/supplier'/>">Smart Watches</a></li>
+          <li><a href="<c:url value='/supplier'/>">Speakers</a></li>
+          <li><a href="<c:url value='/supplier'/>">headphones</a></li>
+          <li><a href="<c:url value='/supplier'/>">Televisions</a></li>
+
+        </ul>
+      </li>
+     
+      <li><a href="<c:url value='/product'/>">Products</a></li>
+      <li><a href="<c:url value='/category'/>">Manage Category</a></li>
+      <li><a href="<c:url value='/product'/>">Manage Product</a></li>
+      <li><a href="<c:url value='/supplier'/>">Manage Supplier</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="<c:url value='/register'/>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="<c:url value='/login'/>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+  
 
 
 
