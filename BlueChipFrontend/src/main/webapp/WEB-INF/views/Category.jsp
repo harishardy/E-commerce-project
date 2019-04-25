@@ -55,8 +55,13 @@
 	<td>${category.categoryDesc}</td>
 	
 	<td>
-		<a href="<c:url value="/editCategory/${category.categoryId}"/>">Edit</a> / 
-		<a href="<c:url value="/deleteCategory/${category.categoryId}"/>">Delete</a>
+		<a href="<c:url value="/editCategory/${category.categoryId}"/>">
+		
+		<img src="<c:url value="resources/images/edit.png"/>" width="70" height="25"/></a>
+		
+		<a href="<c:url value="/deleteCategory/${category.categoryId}"/>">
+		
+		<img src="<c:url value="resources/images/delete.png"/>" width="50" height="20"/></a>
 	</td>
 </tr>
 </c:forEach>

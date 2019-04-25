@@ -39,7 +39,7 @@ public class ProductController
 		m.addAttribute("product",product);
 		
 		List<Product>productList=productDAO.listProduct();
-		m.addAttribute("listProducts",productList);
+		m.addAttribute("productList",productList);
 		
 		List<Category>categoryList=categoryDAO.listCategory();
 		m.addAttribute("categoryList",this.getCategoryList(categoryList));
@@ -98,10 +98,11 @@ public class ProductController
 	{
 		productDAO.addProduct(product1);
 		
-		
+		Product product=new Product();
+		m.addAttribute("product",product);
 		
 		List<Product>productList=productDAO.listProduct();
-		m.addAttribute("listProducts",productList);
+		m.addAttribute("productList",productList);
 		
 		List<Category>categoryList=categoryDAO.listCategory();
 		m.addAttribute("categoryList",this.getCategoryList(categoryList));
@@ -123,7 +124,7 @@ public class ProductController
 		m.addAttribute("product",product1);
 		
 		List<Product>productList=productDAO.listProduct();
-		m.addAttribute("listProducts",productList);
+		m.addAttribute("productList",productList);
 		
 		List<Category>categoryList=categoryDAO.listCategory();
 		m.addAttribute("categoryList",this.getCategoryList(categoryList));
@@ -143,26 +144,30 @@ public class ProductController
 		List<Category>categoryList=categoryDAO.listCategory();
 		m.addAttribute("categoryList",this.getCategoryList(categoryList));
 		
+		List<Supplier>supplierList=supplierDAO.listSupplier();
+		m.addAttribute("supplierList",this.getSupplierList(supplierList));
+		
 		return "UpdateProduct";
 	}
 	
-	@RequestMapping(value="/updateProduct",method=RequestMethod.POST)
-	public String updateProduct(@RequestParam("proId")int proId,@RequestParam("proName")String proName,@RequestParam("proDesc")String proDesc,@RequestParam("stock")int stock,@RequestParam("price")int price,@RequestParam("catId")int catId,@RequestParam("suppId")int suppId,Model m)
+	@RequestMapping(value="/UpdateProduct",method=RequestMethod.POST)
+	public String updateProduct(@ModelAttribute("product")Product product1,Model m)
 	{
-		Product product=productDAO.getProduct(proId);
-	
-		product.setProductName(proName);
-		product.setProductDesc(proDesc);
-		product.setStock(stock);
-		product.setPrice(price);
-		product.setCategoryId(catId);
-		product.setSupplierId(suppId);
+		productDAO.updateProduct(product1);
 		
+		Product product=new Product();
+		m.addAttribute("product",product);
 		
-		productDAO.updateProduct(product);
 		List<Product>productList=productDAO.listProduct();
-		m.addAttribute("listProducts",productList);
-		m.addAttribute("title", "Product");
+		m.addAttribute("productList",productList);
+		
+		List<Category>categoryList=categoryDAO.listCategory();
+		m.addAttribute("categoryList",this.getCategoryList(categoryList));
+		
+		List<Supplier>supplierList=supplierDAO.listSupplier();
+		m.addAttribute("supplierList",this.getSupplierList(supplierList));
+		
+		
 		return "Product";
 	}
 	

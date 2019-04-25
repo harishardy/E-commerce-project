@@ -4,9 +4,9 @@
 <div class="container">
 
 
-<form:form action="InsertProduct" modelAttribute="product" enctype="multipart/form-data" method="post">
+<form:form action="InsertProduct" modelAttribute="product" method="post">
 <table align="center" class="table table-bordered">
-	<tr>
+	<tr bgcolor="grey">
 		<td colspan="7"><h3><center> Add Product Detail</center></h3></td>
 	</tr>
 	<tr>
@@ -70,7 +70,7 @@
 	<td><h4>Operation</h4></td>
 </tr>
 
-<c:forEach items="${listProducts}" var="product">
+<c:forEach items="${productList}" var="product">
 <tr>
 	
 	<td>${product.productId}</td>
@@ -88,8 +88,14 @@
 	<td>${product.supplierId}</td>
 	
 	<td>
-		<a href="<c:url value="/editProduct/${product.productId}"/>">Edit</a> / 
-		<a href="<c:url value="/deleteProduct/${product.productId}"/>">Delete</a>
+		<a href="<c:url value="/editProduct/${product.productId}"/>">
+		
+		<img src="<c:url value="resources/images/edit.png"/>" width="70" height="25"/></a>
+		 
+		<a href="<c:url value="/deleteProduct/${product.productId}"/>">
+		
+		<img src="<c:url value="resources/images/delete.png"/>" width="50" height="20"/></a>
+		
 	</td>
 </tr>
 </c:forEach>
