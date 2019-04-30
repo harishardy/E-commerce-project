@@ -7,7 +7,7 @@
 
 <form action="<c:url value="/addSupplier"/>" method="post">
 <table align="center" class="table table-bordered">
-	<tr bgcolor="grey">>
+	<tr bgcolor="grey">
 		<td colspan="3"><h3><center> Add Supplier Detail</center></h3></td>
 	</tr>
 	<tr>
@@ -31,7 +31,7 @@
 <table align="center" class="table table-bordered">
 
 <tr>
-	<td colspan="4"><h3><center>Suppier Detail</center></h3></td>
+	<td bgcolor="grey" colspan="4"><h3><center>Suppier Detail</center></h3></td>
 </tr>
 
 <tr>

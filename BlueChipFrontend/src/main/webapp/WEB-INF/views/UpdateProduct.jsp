@@ -5,7 +5,7 @@
 <form:form action="UpdateProduct" modelAttribute="product" method="post">
 <table align="center" class="table table-bordered">
 
-<tr class="info">
+<tr bgcolor="grey">
 
 <td colspan="2"><center>Enter Product</center></td>
 </tr>
@@ -54,7 +54,7 @@
 <tr>
 <td colspan="2">
 <center>
-<input type="submit" value="Update Product" class="btn btn-success">
+<input type="submit" value="Update Product">
 </center>
 </td>
 </tr>

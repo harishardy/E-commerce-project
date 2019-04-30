@@ -22,19 +22,16 @@
       <li class="active"><a href="/BlueChipFrontend">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="<c:url value='/categoryList'/>">Category List<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="<c:url value='/category'/>">Smart Phones</a></li>
-          <li><a href="<c:url value='/product'/>">Laptops</a></li>
-          <li><a href="<c:url value='/supplier'/>">Desktops</a></li>
-          <li><a href="<c:url value='/supplier'/>">Tablets</a></li>
-          <li><a href="<c:url value='/supplier'/>">Smart Watches</a></li>
-          <li><a href="<c:url value='/supplier'/>">Speakers</a></li>
-          <li><a href="<c:url value='/supplier'/>">headphones</a></li>
-          <li><a href="<c:url value='/supplier'/>">Televisions</a></li>
+        
+			<c:forEach items="${categorylist}" var="category">
+			 	<li><a href="#">${category.categoryName}</a></li>
+			 	</c:forEach>
+			
 
         </ul>
       </li>
      
-      <li><a href="<c:url value='/product'/>">Products</a></li>
+      <li><a href="<c:url value='/productdisplay'/>">Products</a></li>
       <li><a href="<c:url value='/category'/>">Manage Category</a></li>
       <li><a href="<c:url value='/product'/>">Manage Product</a></li>
       <li><a href="<c:url value='/supplier'/>">Manage Supplier</a></li>
@@ -46,6 +43,12 @@
   </div>
 </nav>
   
+
+
+
+
+
+
 
 
 

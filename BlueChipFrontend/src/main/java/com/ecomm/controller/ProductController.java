@@ -1,5 +1,8 @@
 package com.ecomm.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.ecomm.dao.CategoryDAO;
 import com.ecomm.dao.ProductDAO;
@@ -42,6 +46,7 @@ public class ProductController
 		m.addAttribute("productList",productList);
 		
 		List<Category>categoryList=categoryDAO.listCategory();
+		m.addAttribute("categorylist",categoryList);
 		m.addAttribute("categoryList",this.getCategoryList(categoryList));
 		
 		List<Supplier>supplierList=supplierDAO.listSupplier();
@@ -94,9 +99,49 @@ public class ProductController
 	
 	
 	@RequestMapping(value="/InsertProduct",method=RequestMethod.POST)
-	public String insertProduct(@ModelAttribute("product")Product product1,Model m)
+	public String insertProduct(@ModelAttribute("product")Product product1,@RequestParam("pimage") MultipartFile fileImage,Model m)
 	{
 		productDAO.addProduct(product1);
+		
+		
+		
+		
+		String path="/Users/harishhardy/git/E-commerce-project/BlueChipFrontend/src/main/webapp/resources/images/";
+		
+		path=path+String.valueOf(product1.getProductId())+".jpg";
+		
+		File image=new File(path);
+		
+		if(!fileImage.isEmpty())
+		{
+			try
+			{
+				byte[] buffer=fileImage.getBytes();
+				FileOutputStream fos=new FileOutputStream(image);
+				BufferedOutputStream bos=new BufferedOutputStream(fos);
+				bos.write(buffer);;
+				bos.close();
+				
+ 			}
+			catch(Exception e)
+			{
+				m.addAttribute("ErrorInfo", e.getMessage());
+			}
+			
+		}
+		else
+		{
+			m.addAttribute("ErrorInfo", "Problem Occured");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		Product product=new Product();
 		m.addAttribute("product",product);
@@ -169,6 +214,26 @@ public class ProductController
 		
 		
 		return "Product";
+	}
+	
+	@RequestMapping(value="/productdisplay")
+	public String productDisplay(Model m)
+	{
+		List<Product> listProducts=productDAO.listProduct();
+		m.addAttribute("productlist",listProducts);
+		
+		
+		return "ProductDisplay";
+	}
+	
+	
+	@RequestMapping(value="/totalProductDisplay/{productId}")
+	public String totalProductDisplay(@PathVariable("productId")int productId,Model m)
+	{
+		
+		Product product=productDAO.getProduct(productId);
+		m.addAttribute("product", product);
+		return "TotalProductDisplay";
 	}
 	
 	

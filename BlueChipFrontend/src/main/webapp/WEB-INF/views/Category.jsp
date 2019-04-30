@@ -31,7 +31,7 @@
 <table align="center" class="table table-bordered">
 
 <tr>
-	<td colspan="4"><h3><center>Category Detail</center></h3></td>
+	<td bgcolor="grey" colspan="4"><h3><center>Category Detail</center></h3></td>
 </tr>
 
 <tr>

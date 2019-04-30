@@ -23,6 +23,7 @@ public class CategoryController
 	public String showCategory(Model m)
 	{
 		List<Category>categoryList=categoryDAO.listCategory();
+		m.addAttribute("categorylist",categoryList);
 		m.addAttribute("title", "Category");
 		m.addAttribute("listCategories",categoryList);
 		return "Category";
