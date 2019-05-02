@@ -25,7 +25,7 @@
 <td><img src="<c:url value="/resources/images/${cart.productId}.jpg"/>" width="40" height="40"></td>
 <td>
 <input type="submit" value="Update" class="btn"/> &nbsp;&nbsp;&nbsp; 
-<a href="<c:url value="/deleteCartItem/${cart.cartItemId}"/>" class="btn btn-danger">Delete</a>
+<a href="<c:url value="/deleteCartItem/${cart.cartItemId}"/>" class="btn">Delete</a>
 </td>
 </tr>
 </form>
@@ -36,7 +36,7 @@
 </tr>
 <tr bgcolor="red">
 <td colspan="4"><a href="<c:url value='/productdisplay'/>">Continue Shopping</a>
-<td colspan="4"><a href="<c:url value='/checkOut'/>">Checkout</a>
+<td colspan="4"><a href="<c:url value='/payment'/>">Checkout</a>
 </td>
 </tr>
 </table>

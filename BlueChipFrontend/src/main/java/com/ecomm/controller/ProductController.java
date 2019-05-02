@@ -135,14 +135,6 @@ public class ProductController
 		}
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
 		Product product=new Product();
 		m.addAttribute("product",product);
 		
@@ -195,8 +187,8 @@ public class ProductController
 		return "UpdateProduct";
 	}
 	
-	@RequestMapping(value="/UpdateProduct",method=RequestMethod.POST)
-	public String updateProduct(@ModelAttribute("product")Product product1,Model m)
+	@RequestMapping(value="/updateProduct",method=RequestMethod.POST)
+	public String updateProduct(@ModelAttribute("product")Product product1,@RequestParam("pimage") MultipartFile fileImage,Model m)
 	{
 		productDAO.updateProduct(product1);
 		

@@ -11,15 +11,21 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="<c:url value="/resources/images/Apple.jpg"/>"alt="Apple xs max" style="width:100%;">
+        <img src="<c:url value="/resources/images/headphones.jpg"/>"alt="HEAD PHONES" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="<c:url value="/resources/images/OnePlus7.jpg"/>" alt="OnePlus 7" style="width:100%;">
+        <img src="<c:url value="/resources/images/earphone.jpg"/>" alt="EAR PHONES" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="<c:url value="/resources/images/Watch.jpg"/>" alt="Fossil Smart Watch" style="width:100%;">
+        <img src="<c:url value="/resources/images/smartspeaker.jpg"/>" alt="SMART SPEAKER" style="width:100%;">
+      </div>
+        <div class="item">
+        <img src="<c:url value="/resources/images/smartwatch.jpg"/>" alt="SMART WATCH" style="width:100%;">
+      </div>
+        <div class="item">
+        <img src="<c:url value="/resources/images/macbook.jpg"/>" alt="MACBOOK" style="width:100%;">
       </div>
     </div>
 

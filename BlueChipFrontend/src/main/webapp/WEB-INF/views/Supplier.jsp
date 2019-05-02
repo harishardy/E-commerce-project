@@ -57,11 +57,12 @@
 	<td>
 		<a href="<c:url value="/editSupplier/${supplier.supplierId}"/>">
 		
-		<img src="<c:url value="resources/images/edit.png"/>" width="70" height="25"/></a>
+		<input type="submit" value="EDIT" class="btn"/> &nbsp;&nbsp;&nbsp; </a>
 		
 		<a href="<c:url value="/deleteSupplier/${supplier.supplierId}"/>">
 		
-		<img src="<c:url value="resources/images/delete.png"/>" width="50" height="20"/></a>
+		
+		<input type="submit" value="DELETE" class="btn"/>  </a>
 		
 	</td>
 </tr>

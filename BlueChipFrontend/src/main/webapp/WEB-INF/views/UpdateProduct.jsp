@@ -48,7 +48,12 @@
 				<form:options items="${supplierList}"/>
 			</form:select>
 </td>
+
+<tr>
+		<td>Product Image</td>
+		<td><form:input type="file" path="pimage"/></td>
 </tr>
+	
 
 
 <tr>
