@@ -10,6 +10,6 @@ public boolean addCartItem(Cart cartItem);
 public boolean deleteCartItem(Cart cartItem);
 public boolean updateCartItem(Cart cartItem);
 public List<Cart>listCartItems(String username);
-public Cart getCartItem(int cartitemid);
+public Cart getCartItem(int cartItemId);
 
 }

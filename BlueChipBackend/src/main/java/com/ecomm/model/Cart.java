@@ -11,37 +11,39 @@ public class Cart
 {
 @Id 
 @GeneratedValue
-int cartitemid;
-int orderid;
-int productid;
-String productname;
+int cartItemId;
+int orderId;
+int productId;
+String productName;
 int quantity;
 int price;
 String username;
-String productstatus;
-public int getCartitemid() {
-	return cartitemid;
+String productStatus;
+
+
+public int getCartItemId() {
+	return cartItemId;
 }
-public void setCartitemid(int cartitemid) {
-	this.cartitemid = cartitemid;
+public void setCartItemId(int cartItemId) {
+	this.cartItemId = cartItemId;
 }
-public int getOrderid() {
-	return orderid;
+public int getOrderId() {
+	return orderId;
 }
-public void setOrderid(int orderid) {
-	this.orderid = orderid;
+public void setOrderId(int orderId) {
+	this.orderId = orderId;
 }
-public int getProductid() {
-	return productid;
+public int getProductId() {
+	return productId;
 }
-public void setProductid(int productid) {
-	this.productid = productid;
+public void setProductId(int productId) {
+	this.productId = productId;
 }
-public String getProductname() {
-	return productname;
+public String getProductName() {
+	return productName;
 }
-public void setProductname(String productname) {
-	this.productname = productname;
+public void setProductName(String productName) {
+	this.productName = productName;
 }
 public int getQuantity() {
 	return quantity;
@@ -61,11 +63,11 @@ public String getUsername() {
 public void setUsername(String username) {
 	this.username = username;
 }
-public String getProductstatus() {
-	return productstatus;
+public String getProductStatus() {
+	return productStatus;
 }
-public void setProductstatus(String productstatus) {
-	this.productstatus = productstatus;
+public void setProductStatus(String productStatus) {
+	this.productStatus = productStatus;
 }
 
 }
