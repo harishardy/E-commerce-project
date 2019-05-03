@@ -184,7 +184,7 @@ public class ProductController
 		List<Supplier>supplierList=supplierDAO.listSupplier();
 		m.addAttribute("supplierList",this.getSupplierList(supplierList));
 		
-		return "UpdateProduct";
+		return "InsertProduct";
 	}
 	
 	@RequestMapping(value="/updateProduct",method=RequestMethod.POST)

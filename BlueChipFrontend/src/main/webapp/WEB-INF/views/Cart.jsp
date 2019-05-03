@@ -17,7 +17,7 @@
 <c:forEach items="${cartItemList}" var="cart">
 <form action="<c:url value="/updateCartItem/${cart.cartItemId}"/>">
 <tr>
-<td></td>
+<td>${row.rowIndex}</td>
 <td>${cart.productName}</td>
 <td>${cart.price}</td>
 <td><input type="text" name="quantity" value="${cart.quantity}"/></td>
@@ -25,18 +25,21 @@
 <td><img src="<c:url value="/resources/images/${cart.productId}.jpg"/>" width="40" height="40"></td>
 <td>
 <input type="submit" value="Update" class="btn"/> &nbsp;&nbsp;&nbsp; 
-<a href="<c:url value="/deleteCartItem/${cart.cartItemId}"/>" class="btn">Delete</a>
+
+
+<a href="<c:url value="/deleteCartItem/${cart.cartItemId}"/>"> 
+<input type="submit" value="DELETE" class="btn"/></a>
 </td>
 </tr>
 </form>
 </c:forEach>
-<tr bgcolor="blue">
+<tr bgcolor="grey">
 <td colspan="4"> Grand Total </td>
 <td colspan="4">${grandTotal}</td>
 </tr>
-<tr bgcolor="red">
+<tr bgcolor="grey">
 <td colspan="4"><a href="<c:url value='/productdisplay'/>">Continue Shopping</a>
-<td colspan="4"><a href="<c:url value='/payment'/>">Checkout</a>
+<td colspan="4"><a href="<c:url value='/payment'/>">Payment</a>
 </td>
 </tr>
 </table>

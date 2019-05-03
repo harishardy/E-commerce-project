@@ -24,7 +24,7 @@ public class ProductDAOImpl implements ProductDAO
 	{
 		try
 		{
-			sessionFactory.getCurrentSession().save(product);
+			sessionFactory.getCurrentSession().saveOrUpdate(product);
 			return true;
 		}
 		catch(Exception e)

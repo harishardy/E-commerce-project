@@ -73,7 +73,6 @@
 		<td><h4>Operation</h4></td>
 		<td><input type="submit" value="Insert Product"/></td>
 		</tr>
-	
 
 	
 

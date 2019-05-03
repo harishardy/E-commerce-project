@@ -32,6 +32,7 @@
       </li>
      
       <li><a href="<c:url value='/productdisplay'/>">Products</a></li>
+      <li><a href="<c:url value='/showCart'/>"><span class="glyphicon glyphicon-shopping-cart"><strong>Cart()</strong></span></a></li>
       <li><a href="<c:url value='/category'/>">Manage Category</a></li>
       <li><a href="<c:url value='/product'/>">Manage Product</a></li>
       <li><a href="<c:url value='/supplier'/>">Manage Supplier</a></li>

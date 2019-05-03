@@ -2,7 +2,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <div class="container">
 
-<form:form action="UpdateProduct" modelAttribute="product" method="post">
+<form:form action="UpdateProduct" modelAttribute="product" enctype="multipart/form-data" method="post">
 <table align="center" class="table table-bordered">
 
 <tr bgcolor="grey">
