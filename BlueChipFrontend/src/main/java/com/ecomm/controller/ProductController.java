@@ -184,13 +184,15 @@ public class ProductController
 		List<Supplier>supplierList=supplierDAO.listSupplier();
 		m.addAttribute("supplierList",this.getSupplierList(supplierList));
 		
-		return "InsertProduct";
+		return "UpdateProduct";
 	}
 	
-	@RequestMapping(value="/updateProduct",method=RequestMethod.POST)
+	@RequestMapping(value="/UpdateProduct",method=RequestMethod.POST)
 	public String updateProduct(@ModelAttribute("product")Product product1,@RequestParam("pimage") MultipartFile fileImage,Model m)
 	{
 		productDAO.updateProduct(product1);
+		
+		
 		
 		Product product=new Product();
 		m.addAttribute("product",product);
