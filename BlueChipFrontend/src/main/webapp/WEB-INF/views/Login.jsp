@@ -1,13 +1,8 @@
 <%@ page language="java" contentType="text/html"%>
 <%@include file="Header.jsp" %>
 
-	
-<html>
-<body>
-
-
 <div class="container">
-<form action="<c:url value="/receipt"/>" method="post">
+<form action="perform_login" method="post">
 <table class="table table-bordered">
 <tr class="success">
 <td colspan="12"><center><strong>Sign in Here</strong></center></td>
@@ -27,7 +22,7 @@
 <tr>
 	<td colspan="12">
 		<center>
-		<input type="submit" value="Login" class="btn"/>
+		<input type="submit" value="Login" class="btn btn-success"/>
 		</center>
 	</td>
 </tr>

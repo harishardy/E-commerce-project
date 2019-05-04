@@ -19,7 +19,13 @@
       <a class="navbar-brand" href="index.jsp">GadgetsGo</a>
     </div>
     <ul class="nav navbar-nav">
+    <c:if test="${!sessionScope.loggedIn}">
       <li class="active"><a href="/BlueChipFrontend">Home</a></li>
+      <li><a href="<c:url value='/productdisplay'/>">Products</a></li>
+      </c:if>
+      <c:if test="${!sessionScope.loggedIn}">
+       <c:if test="${!sessionScope.role=='ROLE_USER'}">
+  
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="<c:url value='/categoryList'/>">Category List<span class="caret"></span></a>
         <ul class="dropdown-menu">
         
@@ -33,14 +39,20 @@
      
       <li><a href="<c:url value='/productdisplay'/>">Products</a></li>
       <li><a href="<c:url value='/showCart'/>"><span class="glyphicon glyphicon-shopping-cart"><strong>Cart()</strong></span></a></li>
+      </c:if>
+             <c:if test="${!sessionScope.role=='ROLE_ADMIN'}">
       <li><a href="<c:url value='/category'/>">Manage Category</a></li>
       <li><a href="<c:url value='/product'/>">Manage Product</a></li>
       <li><a href="<c:url value='/supplier'/>">Manage Supplier</a></li>
+      </c:if>
+      </c:if>
     </ul>
+          <c:if test="${!sessionScope.loggedIn}">
     <ul class="nav navbar-nav navbar-right">
       <li><a href="<c:url value='/register'/>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="<c:url value='/login'/>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
+    </c:if>
   </div>
 </nav>
   
