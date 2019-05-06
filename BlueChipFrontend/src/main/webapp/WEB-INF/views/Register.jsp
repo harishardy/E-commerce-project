@@ -2,105 +2,72 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="Header.jsp" %>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit button */
-.registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity: 1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
-</style>
-</head>
-<body>
 
 
+<div class="container">
 <form action="registerUser" method="post">
-  <div class="container">
-    <h1><strong>Register</strong></h1>
-    <p>Please fill in the details.</p>
-    <hr>
+<table class="table table-bordered">
+
     
-    <label for="username"><b>UserName</b></label>
-    <input type="text" placeholder="Enter username" name="username" required>
+   
+<tr class="success">
+<td colspan="12"><center><strong>Sign up Here</strong></center></td>
+</tr>   
+   
+   
+   
+   
+    
+<tr>
+<td colspan="6"> User Name</td>
+<td colspan="6"><input type="text" placeholder="Enter username" name="User Name" required/></td>
+</tr>
+
+
+<tr>
+<td colspan="6"> E-mail ID</td>
+<td colspan="6"><input type="text" placeholder="Enter E-mail Id" name="E-mail Id" required/></td>
+</tr>
+
+
+<tr>
+<td colspan="6"> Address</td>
+<td colspan="6"><input type="text" placeholder="Enter Address" name="Address" required/></td>
+</tr>
+
+
+<tr>
+<td colspan="6"> Mobile.No</td>
+<td colspan="6"><input type="text" placeholder="Enter Mobile.No" name="Mobile.No" required/></td>
+</tr>
+
+
+<tr>
+<td colspan="6"> Password</td>
+<td colspan="6"><input type="text" placeholder="Enter Password" name="Password" required/></td>
+</tr>
+    
+    
+    
+<tr>
+	<td colspan="12">
+		<center>
+		<input type="submit" value="register" class="btn btn-success"/>
+		</center>
+	</td>
+</tr>
     
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter email" name="email" required>
-    
-    <label for="address"><b>Address</b></label>
-    <input type="text" placeholder="Enter Address" name="address" required>
-    
-    <label for="mobileno"><b>Mobile Number</b></label>
-    <input type="text" placeholder="Enter mobileno" name="mobileno" required>
-    
-
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter password" name="password" required>
-
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-
-  <div class="container signin">
+ 
+ 
+ 
+<div class="container signin">
     <p>Already have an account? <a href="login">Sign in</a>.</p>
-  </div>
+</div>
+
+
+   
+  
 </form>
 </body>
 </html>
