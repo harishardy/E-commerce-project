@@ -97,7 +97,7 @@ public String logOut(HttpSession s,Model m)
 }
 
 @RequestMapping("/registerUser")
-public String registerUser(@RequestParam("username")String username, @RequestParam("email")String email,@RequestParam("address")String address, @RequestParam("password")String password, Model m)
+public String registerUser(@RequestParam("username")String username, @RequestParam("email")String email,@RequestParam("address")String address,@RequestParam("mobile")String mobile, @RequestParam("password")String password, Model m)
 {
 	
 	UserDetail user=new UserDetail();
@@ -106,10 +106,11 @@ public String registerUser(@RequestParam("username")String username, @RequestPar
 	user.setAddress(address);
 	user.setEmailId(email);
 	user.setPassword(password);
+	user.setMobileNo(mobile);
 	user.setRole("ROLE_USER");
 	user.setEnabled(true);
 
-   // userdetailDao.Register(user);   
+  userdetailDao.registerUser(user); 
   System.out.println("Register Successfully");
     
 	return "Login";

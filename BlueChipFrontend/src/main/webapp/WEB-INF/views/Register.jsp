@@ -20,31 +20,31 @@
     
 <tr>
 <td colspan="6"> User Name</td>
-<td colspan="6"><input type="text" placeholder="Enter username" name="User Name" required/></td>
+<td colspan="6"><input type="text" placeholder="Enter username" name="username" required/></td>
 </tr>
 
 
 <tr>
 <td colspan="6"> E-mail ID</td>
-<td colspan="6"><input type="text" placeholder="Enter E-mail Id" name="E-mail Id" required/></td>
+<td colspan="6"><input type="text" placeholder="Enter E-mail Id" name="email" required/></td>
 </tr>
 
 
 <tr>
 <td colspan="6"> Address</td>
-<td colspan="6"><input type="text" placeholder="Enter Address" name="Address" required/></td>
+<td colspan="6"><input type="text" placeholder="Enter Address" name="address" required/></td>
 </tr>
 
 
 <tr>
 <td colspan="6"> Mobile.No</td>
-<td colspan="6"><input type="text" placeholder="Enter Mobile.No" name="Mobile.No" required/></td>
+<td colspan="6"><input type="text" placeholder="Enter Mobile.No" name="mobile" required/></td>
 </tr>
 
 
 <tr>
 <td colspan="6"> Password</td>
-<td colspan="6"><input type="text" placeholder="Enter Password" name="Password" required/></td>
+<td colspan="6"><input type="text" placeholder="Enter Password" name="password" required/></td>
 </tr>
     
     
