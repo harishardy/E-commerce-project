@@ -17,7 +17,7 @@
 <c:forEach items="${cartItemList}" var="cart">
 <form action="<c:url value="/updateCartItem/${cart.cartItemId}"/>">
 <tr>
-<td>${row.rowIndex}</td>
+<td>${sessionScope.cartSize-(sessionScope.cartSize-1)}</td>
 <td>${cart.productName}</td>
 <td>${cart.price}</td>
 <td><input type="text" name="quantity" value="${cart.quantity}"/></td>

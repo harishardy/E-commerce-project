@@ -38,8 +38,8 @@
 <li><a href="<c:url value='/showCart'/>"><span class="glyphicon glyphicon-shopping-cart">Cart(${sessionScope.cartSize})</span></a></li>
 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
 <ul class="dropdown-menu">
-			<c:forEach items="${sessionScope.categoryList}" var="c">
-			 	<li><a href="#">${c.categoryname}</a></li>
+			<c:forEach items="${sessionScope.categorylist}" var="category">
+			 	<li><a href="<c:url value='/productCategoryWise/${category.categoryId}'/>">${category.categoryName}</a></li>
 			 	</c:forEach>
 			 </ul>
 </li>
@@ -49,7 +49,7 @@
 </ul>
 <c:if test="${!sessionScope.loggedIn}">
 <ul class="nav navbar-nav navbar-right">
-<li><a href="<c:url value="/register"/>"><span class="glyphicon glyphicon-register"></span>Sign Up</a></li>
+<li><a href="<c:url value='/register'/>"><span class="glyphicon glyphicon-register"></span>Sign Up</a></li>
 <li><a href="<c:url value='/login'/>"><span class="glyphicon glyphicon-login"></span>LogIn</a></li>
 </ul>
 </c:if>

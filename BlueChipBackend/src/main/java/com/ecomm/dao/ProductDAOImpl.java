@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ecomm.model.Product;
 
+
 @Repository("productDAO")
 @Transactional
 public class ProductDAOImpl implements ProductDAO 
@@ -67,7 +68,8 @@ public class ProductDAOImpl implements ProductDAO
 		session.close();
 		return product;
 	}
-
+	
+	
 	@Override
 	public List<Product> listProduct() 
 	{

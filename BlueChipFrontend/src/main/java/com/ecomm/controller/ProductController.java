@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -148,6 +149,8 @@ public class ProductController
 		m.addAttribute("supplierList",this.getSupplierList(supplierList));
 		
 		
+		
+		
 		return "Product";
 	}
 	
@@ -219,6 +222,45 @@ public class ProductController
 		
 		return "ProductDisplay";
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@RequestMapping(value="/productCategoryWise/{categoryId}")
+	public String productCategoryWise(@PathVariable("categoryId")int categoryId,Model m)
+	{
+		List<Product> listProductCategoryWise=productDAO.listProductCategoryWise(categoryId); 
+		m.addAttribute("productlist",listProductCategoryWise);
+		
+		
+		return "ProductDisplay";
+	}
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	@RequestMapping(value="/totalproductdisplay/{productId}")
