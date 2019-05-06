@@ -4,6 +4,8 @@
 <div class="container">
 <form action="perform_login" method="post">
 <table class="table table-bordered">
+
+
 <tr class="success">
 <td colspan="12"><center><strong>Sign in Here</strong></center></td>
 </tr>
@@ -22,7 +24,7 @@
 <tr>
 	<td colspan="12">
 		<center>
-		<input type="submit" value="Login" class="btn btn-success"/>
+		<input type="submit" value="login" class="btn btn-success"/>
 		</center>
 	</td>
 </tr>

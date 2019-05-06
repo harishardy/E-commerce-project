@@ -27,8 +27,7 @@
 <input type="submit" value="Update" class="btn"/> &nbsp;&nbsp;&nbsp; 
 
 
-<a href="<c:url value="/deleteCartItem/${cart.cartItemId}"/>"> 
-<input type="submit" value="DELETE" class="btn"/></a>
+<a href="<c:url value="/deleteCartItem/${cart.cartItemId}"/>" class="btn btn-danger">DELETE</a>
 </td>
 </tr>
 </form>

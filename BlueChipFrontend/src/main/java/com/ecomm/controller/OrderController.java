@@ -2,6 +2,8 @@ package com.ecomm.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,9 +30,9 @@ public class OrderController {
 	UserDAO userDetailDAO;
 	
 	@RequestMapping(value="/payment")
-	public String showPaymentPage(Model m)
+	public String showPaymentPage(HttpSession session,Model m)
 	{
-		String username="tarun";
+		String username=(String)session.getAttribute("username");
 		
 		List<Cart> listCartItems=cartDAO.listCartItems(username);
 		m.addAttribute("grandTotal",this.getGrandTotal(listCartItems));
@@ -38,9 +40,9 @@ public class OrderController {
 	}
 	
 	@RequestMapping(value="/receipt",method=RequestMethod.POST)
-	public String paymentProcess(@RequestParam("pmode")String pmode,Model m)
+	public String paymentProcess(@RequestParam("pmode")String pmode,HttpSession session,Model m)
 	{	
-			String username="tarun";
+			String username=(String)session.getAttribute("username");
 			List<Cart> listCartItems=cartDAO.listCartItems(username);
 			int grantTotal= this.getGrandTotal(listCartItems);
 			

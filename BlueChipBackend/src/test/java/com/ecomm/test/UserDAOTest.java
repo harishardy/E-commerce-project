@@ -36,6 +36,7 @@ public class UserDAOTest
 		user.setMobileNo("9374869223");
 		user.setRole("ROLE_ADMIN");
 		user.setAddress("Chennai");
+		user.setEnabled(true);
 		
 		assertTrue("Problem in Registering the User: ",userDAO.registerUser(user));
 	}

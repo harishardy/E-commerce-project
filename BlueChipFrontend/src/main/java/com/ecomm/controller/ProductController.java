@@ -210,7 +210,7 @@ public class ProductController
 		return "Product";
 	}
 	
-	@RequestMapping(value="/productdisplay")
+	@RequestMapping(value="/productDisplay")
 	public String productDisplay(Model m)
 	{
 		List<Product> listProducts=productDAO.listProduct();
