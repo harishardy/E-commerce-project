@@ -18,12 +18,13 @@
 <nav class="navbar navbar-inverse">
 <div class="container-fluid">
 <div class="navbar-header">
-<a class="navbar-brand" href="#">GadgetsGo</a>
+<a class="navbar-brand" href="index.jsp">GadgetsGo</a>
 </div>
 <ul class="nav navbar-nav">
 <c:if test="${!sessionScope.loggedIn}">
-<li class="active"><a href="index.jsp">Home</a></li>
-<li><a href="<c:url value='/aboutus'/>">About Us</a></li>
+<li><a href="index.jsp">Home</a></li>
+<li><a href="aboutUs.jsp">About Us</a></li>
+
 <li><a href="<c:url value='/productDisplay'/>">Products</a></li>
 </c:if>
 
