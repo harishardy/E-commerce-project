@@ -22,7 +22,7 @@
 <td>${cart.price}</td>
 <td><input type="text" name="quantity" value="${cart.quantity}"/></td>
 <td>${cart.price*cart.quantity}</td>
-<td><img src="<c:url value="/resources/images/${cart.productId}.jpeg"/>" width="40" height="40"></td>
+<td><img src="<c:url value="/resources/images/${cart.productId}.jpg"/>" width="40" height="40"></td>
 <td>
 <input type="submit" value="Update" class="btn"/> &nbsp;&nbsp;&nbsp; 
 

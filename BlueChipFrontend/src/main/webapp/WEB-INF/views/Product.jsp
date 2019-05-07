@@ -129,7 +129,7 @@
 	
 	<td>${product.supplierId}</td>
 	
-	<td><img src="<c:url value="/resources/images/${product.productId}.jpeg"/>" width="60" height="40"/></td>
+	<td><img src="<c:url value="/resources/images/${product.productId}.jpg"/>" width="60" height="40"/></td>
 	
 	<td>
 		<a href="<c:url value="/editProduct/${product.productId}"/>">

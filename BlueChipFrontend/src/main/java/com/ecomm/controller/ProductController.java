@@ -109,7 +109,7 @@ public class ProductController
 		
 		String path="/Users/harishhardy/git/E-commerce-project/BlueChipFrontend/src/main/webapp/resources/images/";
 		
-		path=path+String.valueOf(product1.getProductId())+".jpeg";
+		path=path+String.valueOf(product1.getProductId())+".jpg";
 		
 		File image=new File(path);
 		

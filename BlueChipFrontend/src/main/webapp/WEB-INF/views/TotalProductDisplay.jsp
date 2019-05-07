@@ -24,7 +24,7 @@
 
 <p class="price-detail-wrap"> 
 	<span class="price h3 text-warning"> 
-		<span class="currency">INR</span><span class="num">${product.price}</span>
+		<span class="currency">INR  </span><span class="num">${product.price}</span>
 	</span> 
 	 
 </p> <!-- price-detail-wrap .// -->
@@ -35,15 +35,15 @@
   </dd>
 </dl>
 <dl class="param param-feature">
-  <dt>stock</dt>
+  <dt>Stock</dt>
   <dd>${product.stock}</dd>
 </dl>  <!-- item-property-hor .// -->
 <dl class="param param-feature">
-  <dt>supplier</dt>
+  <dt>Supplier</dt>
   <dd>${product.supplierId}</dd>
 </dl>  <!-- item-property-hor .// -->
 <dl class="param param-feature">
-<dt>category</dt>
+<dt>Category</dt>
 <dd>${product.categoryId}</dd>
 </dl>
 <hr>
@@ -66,7 +66,7 @@
 	</div> 
 		<hr>
 		<input type="submit"
-	 class="btn btn-success btn-lg btn-outline-primary text-uppercase" value="Add To Cart">
+	 class="btn btn-lg btn-outline-primary text-uppercase" value="Add To Cart">
 	 </form>
 </article> 
 <!-- card-body.// -->
