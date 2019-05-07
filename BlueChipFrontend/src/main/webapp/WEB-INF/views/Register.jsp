@@ -10,7 +10,7 @@
 
     
    
-<tr class="success">
+<tr bgcolor="grey">
 <td colspan="12"><center><strong>Sign up Here</strong></center></td>
 </tr>   
    
@@ -52,7 +52,7 @@
 <tr>
 	<td colspan="12">
 		<center>
-		<input type="submit" value="register" class="btn btn-success"/>
+		<input type="submit" value="register" class="btn"/>
 		</center>
 	</td>
 </tr>

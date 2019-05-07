@@ -36,7 +36,7 @@
 <li><a href="<c:url value='/supplier'/>">Manage Supplier</a></li>
 </c:if>
 <c:if test="${sessionScope.role=='ROLE_USER'}">
-<li><a href="<c:url value='/showCart'/>"><span class="glyphicon glyphicon-shopping-cart">Cart(${sessionScope.cartSize})</span></a></li>
+<ul class="nav navbar-nav navbar-right"><li><a href="<c:url value='/showCart'/>"><span class="glyphicon glyphicon-shopping-cart">Cart(${sessionScope.cartSize})</span></a></li></ul>       
 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
 <ul class="dropdown-menu">
 			<c:forEach items="${sessionScope.categorylist}" var="category">

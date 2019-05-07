@@ -6,9 +6,10 @@
 <table align="center" class="table table-bordered">
 
 <tr bgcolor="grey">
-
-<td colspan="2"><center>Enter Product</center></td>
+<td colspan="12"><h4><center><strong>Enter Product Detail</strong></center></h4></td>
 </tr>
+
+
 <tr>
 <td>Product Name</td>
 <td><form:input path="productName"/></td>
@@ -34,7 +35,7 @@
 <td>Category</td>
 <td>
 <form:select path="categoryId">
-				<form:option value="0" label="--select list--"/>
+				<form:option value="0" label="--select category--"/>
 				<form:options items="${categoryList}"/>
 			</form:select></td>
 </tr>
@@ -44,7 +45,7 @@
 <td>Supplier</td>
 <td>
 <form:select path="supplierId">
-				<form:option value="0" label="--select list--"/>
+				<form:option value="0" label="--select supplier--"/>
 				<form:options items="${supplierList}"/>
 			</form:select>
 </td>
@@ -59,7 +60,7 @@
 <tr>
 <td colspan="2">
 <center>
-<input type="submit" value="Update Product">
+<input type="submit" value="Update Product" class="btn">
 </center>
 </td>
 </tr>

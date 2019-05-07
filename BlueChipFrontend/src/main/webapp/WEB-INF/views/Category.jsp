@@ -8,7 +8,7 @@
 <form action="<c:url value="/addCategory"/>" method="post">
 <table align="center" class="table table-bordered">
 	<tr bgcolor="grey">
-		<td colspan="3"><h3><center> Add Category Detail</center></h3></td>
+		<td colspan="3"><h4><center> Add Category Detail</center></h4></td>
 	</tr>
 	<tr>
 		
@@ -20,7 +20,7 @@
 		
 		<td><input type="text" name="catName" id="catName"/></td>
 		<td><textarea cols=30 rows="1" name="catDesc"></textarea></td>
-		<td><input type="submit" value="Add Category"/></td>
+		<td><input type="submit" value="Add Category" class="btn"/></td>
 	</tr>
 	
 </table>
@@ -31,7 +31,7 @@
 <table align="center" class="table table-bordered">
 
 <tr>
-	<td bgcolor="grey" colspan="4"><h3><center>Category Detail</center></h3></td>
+	<td bgcolor="grey" colspan="4"><h4><center>Category Detail</center></h4></td>
 </tr>
 
 <tr>

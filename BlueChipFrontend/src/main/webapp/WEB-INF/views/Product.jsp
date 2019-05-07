@@ -11,7 +11,7 @@
 
 	
 	<tr bgcolor="grey">
-		<td colspan="8"><h3><center> Add Product Detail</center></h3></td>
+		<td colspan="8"><h4><center> Add Product Detail</center></h4></td>
 	</tr>
 	
 	
@@ -42,10 +42,10 @@
 		
 		
 		<tr>
-		<td><h4>Category Id</h4></td>
+		<td><h4>Category</h4></td>
 		<td>
 			<form:select path="categoryId">
-				<form:option value="0" label="--select list--"/>
+				<form:option value="0" label="--select category--"/>
 				<form:options items="${categoryList}"/>
 			</form:select>
 		</td>
@@ -53,9 +53,9 @@
 		
 		
 		<tr>
-		<td><h4>Supplier Id</h4></td>
+		<td><h4>Supplier</h4></td>
 		<td><form:select path="supplierId">
-				<form:option value="0" label="--select list--"/>
+				<form:option value="0" label="--select supplier--"/>
 				<form:options items="${supplierList}"/>
 			</form:select>
 		
@@ -71,7 +71,7 @@
 		
 		<tr>
 		<td><h4>Operation</h4></td>
-		<td><input type="submit" value="Insert Product"/></td>
+		<td><input type="submit" value="Insert Product" class="btn"/></td>
 		</tr>
 
 	
@@ -88,7 +88,7 @@
 <table align="center" class="table table-bordered">
 
 <tr>
-	<td bgcolor="grey" colspan="9"><h3><center>Product Detail</center></h3></td>
+	<td bgcolor="grey" colspan="9"><h4><center>Product Detail</center></h4></td>
 </tr>
 
 <tr>
@@ -129,7 +129,7 @@
 	
 	<td>${product.supplierId}</td>
 	
-	<td><img src="<c:url value="/resources/images/${product.productId}.jpg"/>" width="60" height="40"/></td>
+	<td><img src="<c:url value="/resources/images/${product.productId}.jpeg"/>" width="60" height="40"/></td>
 	
 	<td>
 		<a href="<c:url value="/editProduct/${product.productId}"/>">
