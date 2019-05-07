@@ -107,7 +107,7 @@ public class ProductController
 		
 		
 		
-		String path="/Users/harishhardy/git/E-commerce-project/BlueChipFrontend/src/main/webapp/resources/images/";
+		String path="/Users/harishhardy/git/E-comm/BlueChipFrontend/src/main/webapp/resources/images/";
 		
 		path=path+String.valueOf(product1.getProductId())+".jpg";
 		
@@ -190,28 +190,13 @@ public class ProductController
 		return "UpdateProduct";
 	}
 	
-	@RequestMapping(value="/UpdateProduct",method=RequestMethod.POST)
-	public String updateProduct(@ModelAttribute("product")Product product1,@RequestParam("pimage") MultipartFile fileImage,Model m)
-	{
-		productDAO.updateProduct(product1);
-		
-		
-		
-		Product product=new Product();
-		m.addAttribute("product",product);
-		
-		List<Product>productList=productDAO.listProduct();
-		m.addAttribute("productList",productList);
-		
-		List<Category>categoryList=categoryDAO.listCategory();
-		m.addAttribute("categoryList",this.getCategoryList(categoryList));
-		
-		List<Supplier>supplierList=supplierDAO.listSupplier();
-		m.addAttribute("supplierList",this.getSupplierList(supplierList));
-		
-		
-		return "Product";
-	}
+
+	
+	
+	
+	
+	
+	
 	
 	@RequestMapping(value="/productDisplay")
 	public String productDisplay(Model m)
@@ -250,6 +235,84 @@ public class ProductController
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	@RequestMapping(value="/UpdateProduct",method=RequestMethod.POST)
+	public String updateProduct(@RequestParam("proId")int productId,@RequestParam("productName")String productName,@RequestParam("productDesc")String productDesc,@RequestParam("categoryId")int categoryId,@RequestParam("supplierId")int supplierId,@RequestParam("stock")int stock,@RequestParam("price")int price,@RequestParam("pimage") MultipartFile fileImage,Model m)
+	{
+		Product p1=new Product();
+		Product product=productDAO.getProduct(productId);
+		product.setProductName(productName);
+		product.setProductDesc(productDesc);
+		product.setCategoryId(categoryId);
+		product.setSupplierId(supplierId);
+		product.setStock(stock);
+		product.setPrice(price);
+		product.setPimage(fileImage);
+		
+		
+		productDAO.updateProduct(product);
+		
+		
+		String path="/Users/harishhardy/git/E-comm/BlueChipFrontend/src/main/webapp/resources/images/";
+		
+		path=path+String.valueOf(product.getProductId())+".jpg";
+		
+		File image=new File(path);
+		
+		if(!fileImage.isEmpty())
+		{
+			try
+			{
+				byte[] buffer=fileImage.getBytes();
+				FileOutputStream fos=new FileOutputStream(image);
+				BufferedOutputStream bos=new BufferedOutputStream(fos);
+				bos.write(buffer);;
+				bos.close();
+				
+ 			}
+			catch(Exception e)
+			{
+				m.addAttribute("ErrorInfo", e.getMessage());
+			}
+			
+		}
+		else
+		{
+			m.addAttribute("ErrorInfo", "Problem Occured");
+		}
+		
+		
+		
+		List<Product>productList=productDAO.listProduct();
+		m.addAttribute("productList",productList);
+		m.addAttribute("product",p1);
+		
+		return "Product"; 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

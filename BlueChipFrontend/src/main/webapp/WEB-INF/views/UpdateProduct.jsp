@@ -1,72 +1,87 @@
-<%@include file="Header.jsp" %>
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@include file="Header.jsp"%>
+
+
 <div class="container">
+<form action="<c:url value="/UpdateProduct"/>" method="post" enctype="multipart/form-data">
+<table class="table table-bordered">
 
-<form:form action="UpdateProduct" modelAttribute="product" enctype="multipart/form-data" method="post">
-<table align="center" class="table table-bordered">
-
-<tr bgcolor="grey">
-<td colspan="12"><h4><center><strong>Enter Product Detail</strong></center></h4></td>
-</tr>
-
-
-<tr>
-<td>Product Name</td>
-<td><form:input path="productName"/></td>
-</tr>
-
-<tr>
-<td>Product Description</td>
-<td><form:input path="productDesc"/></td>
-<tr>
-
-
-<tr>
-<td>Stock</td>
-<td><form:input path="stock"/></td>
-</tr>
-
-<tr>
-<td>Price</td>
-<td><form:input path="price"/></td>
-</tr>
-
-<tr>
-<td>Category</td>
-<td>
-<form:select path="categoryId">
-				<form:option value="0" label="--select category--"/>
-				<form:options items="${categoryList}"/>
-			</form:select></td>
-</tr>
-
-<tr>
-
-<td>Supplier</td>
-<td>
-<form:select path="supplierId">
-				<form:option value="0" label="--select supplier--"/>
-				<form:options items="${supplierList}"/>
-			</form:select>
-</td>
-
-<tr>
-		<td>Product Image</td>
-		<td><form:input type="file" path="pimage"/></td>
-</tr>
+	<tr bgcolor="grey">
+	<td colspan="12"><h4><center><strong>Product Detail</strong></center></h4></td>
+	</tr>
 	
-
-
-<tr>
-<td colspan="2">
-<center>
-<input type="submit" value="Update Product" class="btn">
-</center>
-</td>
-</tr>
-
-
-
+	<tr>
+		<td>Product Id</td>
+		<td><input type="number" name="proId" value="${product.productId}"readonly/></td>
+	</tr>
+	
+	
+	<tr>
+		<td>Product Name</td>
+		<td><input type="text" name="productName" value="${product.productName}"/></td>
+	</tr>
+	
+	
+	<tr>
+		<td>Product Description</td>
+		<td><input type="text" name="productDesc" value="${product.productDesc}"/></td>
+	</tr>
+	
+	<tr>
+		<td>Product Stock</td>
+		<td><input type="text" name="stock" value="${product.stock}"/></td>
+	</tr>
+	
+	<tr>
+		<td>Product Price</td>
+		<td><input type="text" name="price" value="${product.price}"/></td>
+	</tr>
+	
+	<tr>
+		<td>Category</td>
+		<td>
+		<select name='categoryId'>
+		<c:forEach items='${categoryList}' var="category">
+		<option value='${category.key}'>
+		${category.value}
+		</option>
+		</c:forEach>
+		</select> 
+		</td>
+	</tr>
+	
+	<tr>
+		<td>Supplier</td>
+		<td>
+		
+		<select name='supplierId'>
+		<c:forEach items='${supplierList}' var="supplier">
+		<option value='${supplier.key}'>
+		${supplier.value}
+		</option>
+		</c:forEach>
+		</select> 
+		</td>
+	</tr>
+	
+	
+	
+	
+	<tr>
+		<td>Product Image</td>
+		<td><input type="file" name="pimage"></td>
+	</tr>
+	
+	
+	<tr>
+		<td colspan="2">
+		<center>
+		<input type="submit" value="Update Product" class="btn"/>
+		</center>
+		</td>
+	</tr>
 </table>
-</form:form>
-</div>
+</form>
+
+
+</body>
+</html>
