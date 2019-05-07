@@ -90,5 +90,7 @@ public class ProductDAOImpl implements ProductDAO
 		session.close();
 		return listProduct;
 	}
+	
+	
 
 }

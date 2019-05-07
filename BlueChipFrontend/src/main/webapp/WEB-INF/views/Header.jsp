@@ -44,6 +44,12 @@
 			 	</c:forEach>
 			 </ul>
 </li>
+
+
+
+
+
+
 <li><a href="<c:url value='/productDisplay'/>">Products</a></li>
 </c:if>
 </c:if>

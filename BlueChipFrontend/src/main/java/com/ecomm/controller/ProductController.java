@@ -51,7 +51,9 @@ public class ProductController
 		m.addAttribute("categoryList",this.getCategoryList(categoryList));
 		
 		List<Supplier>supplierList=supplierDAO.listSupplier();
+		m.addAttribute("supplierlist",supplierList);
 		m.addAttribute("supplierList",this.getSupplierList(supplierList));
+		
 		
 		return "Product";
 	}
@@ -231,6 +233,9 @@ public class ProductController
 		
 		return "ProductDisplay";
 	}
+	
+	
+	
 	
 	
 	

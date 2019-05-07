@@ -12,4 +12,5 @@ public interface ProductDAO
 	public Product getProduct(int productId);
 	public List<Product> listProduct();
 	public List<Product> listProductCategoryWise(int categoryId);
+	
 }

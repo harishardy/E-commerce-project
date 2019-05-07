@@ -31,7 +31,7 @@
 <table align="center" class="table table-bordered">
 
 <tr>
-	<td bgcolor="grey" colspan="4"><h4><center>Suppier Detail</center></h4></td>
+	<td bgcolor="grey" colspan="4"><h4><center>Supplier Detail</center></h4></td>
 </tr>
 
 <tr>

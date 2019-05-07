@@ -27,7 +27,7 @@ public class SupplierController
 	public String showSupplier(Model m)
 	{
 		List<Supplier>supplierList=supplierDAO.listSupplier();
-		
+		m.addAttribute("supplierlist",supplierList);
 		m.addAttribute("title", "Supplier");
 		m.addAttribute("listSuppliers",supplierList);
 		
