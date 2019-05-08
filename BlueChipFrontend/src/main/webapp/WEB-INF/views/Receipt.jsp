@@ -34,9 +34,10 @@
 <th>Total Price</th>
 <th>Images</th>
 </tr>
+<% int i=1; %>
 <c:forEach items="${cartItemList}" var="cart">
 <tr>
-<td> </td>
+<td><%=i %><% i++; %></td>
 <td>${cart.productName}</td>
 <td>${cart.price}</td>
 <td>${cart.quantity}</td>

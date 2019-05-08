@@ -47,6 +47,7 @@
 <dd>${product.categoryId}</dd>
 </dl>
 <hr>
+<c:if test="${sessionScope.loggedIn}">
 <form action="<c:url value="/addToCart/${product.productId}"/>">
 
 	<div class="row">
@@ -68,6 +69,10 @@
 		<input type="submit"
 	 class="btn btn-lg btn-outline-primary text-uppercase" value="Add To Cart">
 	 </form>
+	 </c:if>
+	 <c:if test="${!sessionScope.loggedIn}">
+		<a href="<c:url value='/login'/>"class="btn btn-info btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</a>
+	 </c:if>
 </article> 
 <!-- card-body.// -->
 		</aside> <!-- col.// -->
