@@ -58,22 +58,6 @@ static SupplierDAO supplierDAO;
 		}
 	}
 	
-	@Ignore
-	@Test
-	public void listSupplierCategoryWiseTest()
-	{
-		List<Supplier> listSuppliers=supplierDAO.listSupplierCategoryWise(2);
-		
-		assertTrue("Problem in Listing the Products",listSuppliers.size()>0);
-		
-		System.out.println("-----CategoryWise-----");
-		for(Supplier supplier:listSuppliers)
-		{
-			System.out.print(supplier.getSupplierId()+":::");
-			System.out.print(supplier.getSupplierName()+":::");
-			System.out.print(supplier.getSupplierAddr()+":::");
-			
-		}
-	}
+
 
 }

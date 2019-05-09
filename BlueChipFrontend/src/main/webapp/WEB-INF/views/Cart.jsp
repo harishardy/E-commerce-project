@@ -17,10 +17,6 @@
 <% int i=1; %>
 <c:forEach items="${cartItemList}" var="cart">
 
-
-
-
-
 <form action="<c:url value="/updateCartItem/${cart.cartItemId}"/>">
 
 <tr>
@@ -39,11 +35,11 @@
 </form>
 
 </c:forEach>
-<tr bgcolor="grey">
+<tr class="success">
 <td colspan="4"> Grand Total </td>
 <td colspan="4">${grandTotal}</td>
 </tr>
-<tr bgcolor="grey">
+<tr class="success">
 <td colspan="4"><a href="<c:url value='/productdisplay'/>">Continue Shopping</a>
 <td colspan="4"><a href="<c:url value='/payment'/>">Payment</a>
 </td>

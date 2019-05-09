@@ -6,7 +6,7 @@
 <tr bgcolor="grey">
 <td colspan="4" class="text-center"><h3>Invoice</h3></td>
 </tr>
-<tr bgcolor="gold">
+<tr class="success">
 	<td>ORDERID</td>
 	<td>ORD${orderDetail.orderId}</td>
 	<td>Customer Name</td>
@@ -48,11 +48,11 @@
 </table>
 </td>
 </tr>
-<tr bgcolor="green">
-<td colspan="4">Address</td>
+<tr class="success">
+<td colspan="8">Address</td>
 </tr>
 <tr>
-<td>${user.address}</td>
+<td colspan="8">${user.address}</td>
 </tr>
 </table>
 </div>

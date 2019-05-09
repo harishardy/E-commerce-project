@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ecomm.dao.CategoryDAO;
 import com.ecomm.dao.SupplierDAO;
-import com.ecomm.model.Category;
 import com.ecomm.model.Supplier;
 
 @Controller

@@ -12,5 +12,5 @@ public interface SupplierDAO
 	public boolean deleteSupplier(Supplier supplier);
 	public boolean updateSupplier(Supplier supplier);
 	public List<Supplier> listSupplier();
-	public List<Supplier> listSupplierCategoryWise(int categoryId);
+	
 }

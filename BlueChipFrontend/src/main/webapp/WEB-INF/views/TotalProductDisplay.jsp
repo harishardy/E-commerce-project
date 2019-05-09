@@ -11,7 +11,7 @@
 <article class="gallery-wrap"> 
 <div class="img-big-wrap">
   <div> <a href="#">
-  <img src="<c:url value="/resources/images/${product.productId}.jpg"/>" width="200"></a>
+  <img src="<c:url value="/resources/images/${product.productId}.jpg"/>" width="400"></a>
   </div>
   </div>
 </article>
@@ -47,7 +47,7 @@
 <dd>${product.categoryId}</dd>
 </dl>
 <hr>
-<c:if test="${sessionScope.loggedIn}">
+<c:if test="${sessionScope.role=='ROLE_USER'}">
 <form action="<c:url value="/addToCart/${product.productId}"/>">
 
 	<div class="row">
@@ -70,9 +70,14 @@
 	 class="btn btn-lg btn-outline-primary text-uppercase" value="Add To Cart">
 	 </form>
 	 </c:if>
-	 <c:if test="${!sessionScope.loggedIn}">
-		<a href="<c:url value='/login'/>"class="btn btn-info btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</a>
+	 <c:if test="${sessionScope.role=='ROLE_ADMIN'}">
+		<a href="<c:url value='/login'/>"class="btn btn-lg btn-outline-primary text-uppercase"><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</a>
 	 </c:if>
+	 
+	 <c:if test="${!sessionScope.loggedIn}">
+		<a href="<c:url value='/login'/>"class="btn btn-lg btn-outline-primary text-uppercase"><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</a>
+	 </c:if>
+	 
 </article> 
 <!-- card-body.// -->
 		</aside> <!-- col.// -->

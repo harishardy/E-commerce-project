@@ -1,5 +1,10 @@
+<%@ page language="java"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
+
 <div class="w3-container">
-  <h2>Carousel</h2>  
+  <h2>Hello, ${sessionScope.username}</h2>  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -12,7 +17,7 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active">
+      <div class="item active" >
         <img src="<c:url value="/resources/images/headphones.jpg"/>"alt="HEAD PHONES" style="width:100%;">
       </div>
 
@@ -44,3 +49,32 @@
     </a>
   </div>
 </div>
+
+
+
+<p></p>
+
+
+<div class="w3-container">
+
+<div class="row text-center text-lg-left">
+
+	<c:forEach items="${categorylist}" var="category">
+		<div class="col-lg-4 col-md-4 col-xm-6 col-xs-12">
+			 	<a href="<c:url value="/productCategoryWise/${category.categoryId}"/>">
+			 	<img class="img-fluid img-rounded" src="<c:url value="/resources/images/${category.categoryId}.jpg"/>" width="250" height="250"/>
+			 	</a>
+			 	<h4><strong>${category.categoryName}</strong></h4>
+			 	<p>Number of Products : 7</p>
+			 	
+			 	<p>    </p>
+			 	</div>
+			 	</c:forEach>
+			 	
+			 	
+</div>
+</div>
+
+
+
+

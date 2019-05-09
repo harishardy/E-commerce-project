@@ -52,22 +52,25 @@
 <tr>
 	<td colspan="12">
 		<center>
-		<input type="submit" value="register" class="btn"/>
+		<input type="submit" value="Register" class="btn"/>
 		</center>
 	</td>
 </tr>
     
 
- 
- 
- 
+</table>
+
+
 <div class="container signin">
     <p>Already have an account? <a href="login">Sign in</a>.</p>
 </div>
 
 
-   
-  
 </form>
+</div>
+
+
+
+
 </body>
 </html>

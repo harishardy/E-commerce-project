@@ -51,7 +51,7 @@ Authentication authority=sContext.getAuthentication();
 
 String username=authority.getName();
 
-Collection<GrantedAuthority> roles= (Collection<GrantedAuthority>)authority.getAuthorities();
+Collection<GrantedAuthority> roles=(Collection<GrantedAuthority>)authority.getAuthorities();
 
 List<Product> listProduct=productDao.listProduct();
 m.addAttribute("productlist", listProduct);
@@ -71,6 +71,7 @@ for(GrantedAuthority role:roles)
 		page="UserHome";
 		session.setAttribute("username", username);
 		session.setAttribute("loggedIn", loggedIn);
+		return page;
 	}
 	else
 	{
@@ -78,12 +79,12 @@ for(GrantedAuthority role:roles)
 		page="AdminHome";
 		session.setAttribute("username", username);
 		session.setAttribute("loggedIn", loggedIn);
-	
+		return page;
 	}
-	System.out.println("Sucess"+username);
-	page="ProductDisplay";
+	
 }
-return page;
+System.out.println("Success"+username);
+return "ProductDisplay";
 
 }
 
@@ -95,6 +96,21 @@ public String logOut(HttpSession s,Model m)
 	return "Login";
 	
 }
+
+
+@RequestMapping(value="/relogin")
+public String reLogin(HttpSession s,Model m)
+{
+	
+	s.invalidate();
+	return "ReLogin";
+	
+}
+
+
+
+
+
 
 @RequestMapping("/registerUser")
 public String registerUser(@RequestParam("username")String username, @RequestParam("email")String email,@RequestParam("address")String address,@RequestParam("mobile")String mobile, @RequestParam("password")String password, Model m)

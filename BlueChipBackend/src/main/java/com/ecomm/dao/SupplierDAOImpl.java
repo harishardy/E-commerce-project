@@ -78,16 +78,7 @@ public class SupplierDAOImpl implements SupplierDAO
 		return listSupplier;
 	}
 
-	@Override
-	public List<Supplier> listSupplierCategoryWise(int categoryId) 
-	{
-		Session session=sessionFactory.openSession();
-		Query query=session.createQuery("from Supplier where categoryId=:catid");
-		query.setParameter("catid", categoryId);
-		List<Supplier> listSupplier=query.list();
-		session.close();
-		return listSupplier;
-	}
+
 
 	
 }

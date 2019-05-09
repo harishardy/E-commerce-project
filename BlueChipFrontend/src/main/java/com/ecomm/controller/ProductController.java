@@ -6,11 +6,9 @@ import java.io.FileOutputStream;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -207,6 +205,8 @@ public class ProductController
 		m.addAttribute("productlist",listProducts);
 		
 		
+		
+		
 		return "ProductDisplay";
 	}
 	
@@ -216,10 +216,19 @@ public class ProductController
 	
 	
 	
+	@RequestMapping(value="/categoryDisplay")
+	public String categoryDisplay(Model m)
+	{
+		List<Product> listProducts=productDAO.listProduct();
+		m.addAttribute("productlist",listProducts);
+		
+		
+		return "CategoryDisplay";
+	}
 	
 	
 	
-	
+
 	
 	
 	
@@ -233,6 +242,13 @@ public class ProductController
 		
 		return "ProductDisplay";
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -337,6 +353,9 @@ public class ProductController
 		
 		Product product=productDAO.getProduct(productId);
 		m.addAttribute("product", product);
+		
+		
+		
 		return "TotalProductDisplay";
 	}
 	

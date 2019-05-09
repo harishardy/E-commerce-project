@@ -29,9 +29,12 @@
 	</td>
 </tr>
 
+
+
 </table>
 
-<p><font color="blue">Please Login to shop Online . . .</font></p>
+<p><font color="red">Username and Password doesn't match. Try again...</font></p>
+
 
 </form>
 </div>
