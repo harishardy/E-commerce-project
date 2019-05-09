@@ -27,7 +27,7 @@
 <td colspan="8" class="text-center">Ordered Items</td>
 </tr>
 <tr class="warning">
-<th>SL #</th>
+<th>SL.no</th>
 <th>Product Name</th>
 <th>Price</th>
 <th>Quantity</th>

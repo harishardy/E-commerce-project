@@ -6,7 +6,7 @@
 <td colspan="8"> Your Cart </td>
 </tr>
 <tr class="warning">
-<th>SL #</th>
+<th>SL.no</th>
 <th>Product Name</th>
 <th>Price</th>
 <th>Quantity</th>
@@ -16,7 +16,13 @@
 </tr>
 <% int i=1; %>
 <c:forEach items="${cartItemList}" var="cart">
+
+
+
+
+
 <form action="<c:url value="/updateCartItem/${cart.cartItemId}"/>">
+
 <tr>
 <td><%=i %><% i++; %></td>
 <td>${cart.productName}</td>
@@ -26,12 +32,12 @@
 <td><img src="<c:url value="/resources/images/${cart.productId}.jpg"/>" width="40" height="40"></td>
 <td>
 <input type="submit" value="Update" class="btn"/> &nbsp;&nbsp;&nbsp; 
-
-
 <a href="<c:url value="/deleteCartItem/${cart.cartItemId}"/>" class="btn btn-danger">DELETE</a>
 </td>
+
 </tr>
 </form>
+
 </c:forEach>
 <tr bgcolor="grey">
 <td colspan="4"> Grand Total </td>
